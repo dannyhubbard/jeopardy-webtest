@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+html,
+body {
+  background: #111111;
+}
+:root {
+  --blue: #060ce9;
+  --yellow: #ffcc00;
+  --white: white;
+}
+
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: #222;
+  height: 50px;
+  padding: 20px;
+  color: white;
+}
+
+.App-header h1 {
+  float: left;
+}
+.App-header h2 {
+  float: right;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.Message {
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.Clue {
+  display: inline-block;
+  background: var(--blue);
+  height: 5rem;
+  width: 9rem;
+  margin: 0.25rem;
+  transition: 0.15s all ease-in-out;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.Clue.Clue-unanswered:hover {
+  cursor: pointer;
+  outline: 0.25rem solid var(--white);
+  transition: 0.15s all ease-in-out;
+}
+
+.Clue.Clue-unanswered:active {
+  outline: 0.25rem solid var(--yellow);
+  transition: 0.15s all ease-in-out;
+}
+
+.Clue-amount {
+  color: var(--yellow);
+  font-family: impact, sans-serif;
+  font-weight: bold;
+  font-size: 2.75rem;
+  text-shadow: 3px 3px 0px var(--black);
+  line-height: 5rem;
+}
+.Clue-currency {
+  font-weight: normal;
+}
+
+.Clue-active {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--blue);
+  font-size: 4rem;
+  color: var(--white);
+  font-family: 'Libre Baskerville', serif;
+  text-shadow: 4px 4px 0px var(--black);
+  vertical-align: middle;
+}
+
+.group {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Clue-active-answer input {
+  border: none;
+  box-shadow: 4px 4px 0px var(--black);
+  font-size: 2rem;
+  outline: none;
+  padding: 0.5rem;
+}
+.Clue-active-answer input:focus {
+  box-shadow: 4px 4px 0px var(--yellow);
+}
+
+.Clue-active-answer button {
+  background: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.25rem;
+}
+
+.Clue-active-answer button:hover {
+  box-shadow: 4px 4px 0px var(--black);
+}
+.Clue-active-answer button:active {
+  box-shadow: 4px 4px 0px var(--yellow);
+}
+
+.Clue-cancel {
+  font-size: 5rem;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  text-shadow: none;
+  line-height: 0;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+.Clue-cancel:hover {
+  cursor: pointer;
+  color: var(--yellow);
+}
+
+.Board {
+  width: 74.3%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+
+.Header {
+  background: var(--blue);
+  height: 5rem;
+  width: 9rem;
+  margin: 0.25rem;
+  transition: 0.15s all ease-in-out;
+  -moz-user-select: none;
+  user-select: none;
+  color: var(--white);
+  font-family: impact, sans-serif;
+  font-weight: bold;
+  font-size: 1.75rem;
+  font-size-adjust: 0.58;
+  text-shadow: 3px 3px 0px var(--black);
+  vertical-align: middle;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Gameover {
+  color: var(--white);
+}
